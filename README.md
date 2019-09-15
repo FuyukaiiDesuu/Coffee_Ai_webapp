@@ -1,4 +1,4 @@
-#Coffee Disease Image Classifier Using Deep Learning
+# Coffee Disease Image Classifier Using Deep Learning
 
-> By Benjo Mangui-ob and Neil Mendrico Copyright 2019
+By Benjo Mangui-ob and Neil Mendrico Copyright 2019
 
