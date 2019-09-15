@@ -1,0 +1,13 @@
+Werkzeug
+Flask
+numpy
+Keras
+gevent
+pillow
+h5py
+tensorflow
+gunicorn
+itsdangerous
+MarkupSafe
+Jinja2
+opencv-python
