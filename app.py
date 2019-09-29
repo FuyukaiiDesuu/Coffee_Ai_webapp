@@ -17,13 +17,19 @@ from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
 
+#GPU priority set
+import tensorflow as tf
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+
 # Define a flask app
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
 #MODEL_PATH, IMG_SIZE = 'models/LeNet_BestModel.h5', 32
-#MODEL_PATH, IMG_SIZE = 'models/AlexNet_BestModel.h5', 224
-MODEL_PATH, IMG_SIZE = 'models/Gnet_BestModel.h5', 32
+MODEL_PATH, IMG_SIZE = 'models/AlexNet_BestModel.h5', 224
+#MODEL_PATH, IMG_SIZE = 'models/Gnet_BestModel.h5', 32
 
 # Load your trained model
 model = load_model(MODEL_PATH)
